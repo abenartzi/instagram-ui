@@ -10,23 +10,27 @@ class Post extends Component {
 
         return (
             <div className="d-flex">
-                <div className="card" style={{width: "22rem"}}>
+                <div className="card">
 
                     <div className="card-header">
-                        <h5 className="card-title"><FontAwesomeIcon icon={faUserCircle} size="2x"/></h5>
-                        <p className="card-text"><FontAwesomeIcon icon={faCalendarAlt}/>{this.props.created}</p>
+                            <span className="cardDate">
+                            <FontAwesomeIcon className={"calIcon"} icon={faCalendarAlt}/>
+                            <span className="card-text">{this.props.created}</span>
+                            </span>
+                        <a href={"#"} className="card-title"><FontAwesomeIcon className="userCircleIcon" icon={faUserCircle} size="2x"/></a>
                     </div>
 
                     <div className="userImage">
-                    <img src={this.props.image} alt={this.props.imageId}/>
+                        <img src={this.props.image} alt={this.props.imageId}/>
                     </div>
 
                     <div className="card-body">
-                        <div><h5 className="card-title">{this.props.title}</h5></div>
+
+                            <div><h5 className="card-title">{this.props.title}</h5></div>
 
                         <footer className={'cardFooter'}>
-                        <TagList tags={this.props.tags}/>
-                        <div className="card-text"><FontAwesomeIcon icon={faHeart}/>{this.props.likes}</div>
+                            <TagList tags={this.props.tags}/>
+                            <div className="card-text"><FontAwesomeIcon className="heartIcon" icon={faHeart}/>{this.props.likes}</div>
                         </footer>
 
                     </div>

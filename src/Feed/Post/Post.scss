@@ -1,6 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+SC&display=swap');
+
 .card {
+  width:22rem;
   margin-top: 10px;
+  overflow: hidden;
+  box-shadow: 2px 1px 4px floralwhite;
+}
+.card-text {
+  font-family:  'Cormorant SC', serif;
+  margin-left: 5px;
 }
 .card-header {
   display: flex;
@@ -11,26 +19,53 @@
 
 }
 .card-body {
-  font-family: 'Dancing Script', cursive;
+  font-family:  'Cormorant SC', serif;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding: 15px;
 }
 .tag {
-  border: solid 1px black;
-  display: inline;
-  background-color: darkgrey;
-  border-radius: 5px;
-  margin-right: 3px;
+  display: inline-block;
+  font-size: 12px;
+  color: #fff;
+  background: #5798ff;
+  margin-right: 5px;
+  padding: 2px 4px;
+  border-radius: 3px;
 }
+.tag a{
+  font-family: sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
 .userImage {
   display: flex;
   align-items: center;
   overflow: hidden;
   height: 210px;
+  transition-duration: .2s;
+}
+.userImage:hover {
+  transform: scale(1.1);
 }
 .cardFooter {
   display: flex;
   justify-content: space-between;
   padding-top: 5em;
+}
+.calIcon {
+  color: cornflowerblue;
+  margin-top: 3px;
+}
+.userCircleIcon {
+  color: cornflowerblue;
+}
+.heartIcon{
+  position: relative;
+  right: 5px;
+}
+.heartIcon:hover {
+  color:red;
 }

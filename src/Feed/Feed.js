@@ -22,6 +22,17 @@ class Feed extends Component {
     }
 
     render() {
+        function timeConverter(UNIX_timestamp) {
+             let a = new Date(UNIX_timestamp * 1000);
+             let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+             let year = a.getFullYear();
+             let month = months[a.getMonth()];
+             let date = a.getDate();
+
+             let time = `${date} ${month} ${year}`;
+            return time;
+
+        }
 
         return (
 
@@ -29,7 +40,7 @@ class Feed extends Component {
                 {this.state.posts.map(post =>{
                     return <Post
                         key={post.id}
-                        created={post.created}
+                        created={timeConverter(post.created)}
                         image={post.image}
                         title={post.title}
                         likes={post.likes}
