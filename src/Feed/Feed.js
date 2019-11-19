@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Feed.scss';
 import Post from "./Post/Post";
+import TagList from "./Post/TagList/TagList";
 
 
 class Feed extends Component {
@@ -16,13 +17,14 @@ class Feed extends Component {
             .then(res => res.json())
             .then(posts => {
                 this.setState({posts})
-                //console.log(posts)
+                console.log(posts)
             })
     }
 
     render() {
 
         return (
+
             <div className='container'>
                 {this.state.posts.map(post =>{
                     return <Post
@@ -32,8 +34,10 @@ class Feed extends Component {
                         title={post.title}
                         likes={post.likes}
                         tags={post.tags}
+                    >
 
-                    />
+
+                    </Post>
                 })}
             </div>
         );
