@@ -2,11 +2,35 @@
 .card {
   margin-top: 10px;
 }
-
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
 .card img {
-  width: 100%;
+  width: 131%;
 
 }
 .card-body {
   font-family: 'Dancing Script', cursive;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.tag {
+  border: solid 1px black;
+  display: inline;
+  background-color: darkgrey;
+  border-radius: 5px;
+  margin-right: 3px;
+}
+.userImage {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 210px;
+}
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5em;
 }

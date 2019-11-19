@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 class TagList extends Component {
     render() {
         return (
-            <div>
+            <div >
                 {this.props.tags.map(tag => {
-                    return <div>#{tag}</div>
+                    return <div className="tag">#{tag}</div>
                 })}
             </div>
         );
