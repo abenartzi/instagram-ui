@@ -3,6 +3,8 @@ import './Post.scss'
 import TagList from "./TagList/TagList";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCalendarAlt, faHeart, faUserCircle} from '@fortawesome/free-solid-svg-icons'
+
+
 class Post extends Component {
 
     render() {
