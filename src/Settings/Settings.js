@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
-import './Profile.scss'
 
-class Profile extends Component {
+class Settings extends Component {
     render() {
-
         return (
             <div>
-                Profile
+                Settings Page!
             </div>
         );
     }
 }
 
-export default Profile;
+export default Settings;

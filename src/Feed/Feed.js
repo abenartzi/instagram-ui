@@ -28,7 +28,7 @@ class Feed extends Component {
         const override = css`
             display:block;
             margin: 0 auto;
-            border-color:blue;
+            border-color:#5798ff;
         `;
 
         function timeConverter(UNIX_timestamp) {
@@ -52,7 +52,7 @@ class Feed extends Component {
                         css={override}
                         sizeUnit={"px"}
                         size={80}
-                        color={'#123abc'}
+                        color={'#5798ff'}
                         loading={this.state.loading}/>
                     </div> : null
                 }

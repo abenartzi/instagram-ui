@@ -3,6 +3,7 @@ import './App.scss';
 import Header from "./Header/Header";
 import Feed from "./Feed/Feed";
 import Profile from "./Profile/Profile";
+import Settings from "./Settings/Settings";
 
 import {
     BrowserRouter as Router,
@@ -18,6 +19,9 @@ function App() {
           <Header />
             <main>
                 <Switch>
+                    <Route path="/settings">
+                        <Settings/>
+                    </Route>
                     <Route path="/profile">
                         <Profile/>
                     </Route>
