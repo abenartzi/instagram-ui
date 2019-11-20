@@ -3,6 +3,7 @@ import './Post.scss'
 import TagList from "./TagList/TagList";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCalendarAlt, faHeart, faUserCircle} from '@fortawesome/free-solid-svg-icons'
+import {Link} from "react-router-dom";
 
 
 class Post extends Component {
@@ -19,7 +20,7 @@ class Post extends Component {
                             <FontAwesomeIcon className={"calIcon"} icon={faCalendarAlt}/>
                             <span className="card-text">{this.props.created}</span>
                             </span>
-                        <a href={"#"} className="card-title"><FontAwesomeIcon className="userCircleIcon" icon={faUserCircle} size="2x"/></a>
+                        <Link to={"/profile"} href={"#"} className="card-title"><FontAwesomeIcon className="userCircleIcon" icon={faUserCircle} size="2x"/></Link>
                     </div>
 
                     <div className="userImage">
