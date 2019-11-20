@@ -39,6 +39,9 @@
   color: #fff;
   text-decoration: none;
 }
+.tag:hover{
+  transform:scale(1.1)
+}
 
 .userImage {
   display: flex;
@@ -68,4 +71,9 @@
 }
 .heartIcon:hover {
   color:red;
+  transform:scale(1.2)
+}
+.userCircleIcon:hover {
+  position:relative;
+  top:-5px
 }
