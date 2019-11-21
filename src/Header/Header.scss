@@ -6,6 +6,11 @@
 .instaLogo {
   width: 150px;
 }
-.navbar {
-  padding: 5px;
+.fixedNav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.nav-link {
+  font-family: OpenSans;
 }

@@ -7,7 +7,7 @@ class Header extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light fixedNav">
                 <div>
                     <Link to={"/"} className="navbar navbar-expand-lg navbar-light">
                     <img  src="https://img.icons8.com/nolan/64/000000/instagram-new.png" alt="#"/>

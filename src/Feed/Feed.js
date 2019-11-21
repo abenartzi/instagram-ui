@@ -45,6 +45,7 @@ class Feed extends Component {
 
         return (
             <div>
+                <div className="heightPlaceholder"></div>
                 <div className="loading">
                 {this.state.loading ?
                     <div>
