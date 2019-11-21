@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/instagram-ui/static/css/main.c6c350e1.chunk.css",
-    "main.js": "/instagram-ui/static/js/main.f76e8c4c.chunk.js",
-    "main.js.map": "/instagram-ui/static/js/main.f76e8c4c.chunk.js.map",
+    "main.js": "/instagram-ui/static/js/main.276bfb43.chunk.js",
+    "main.js.map": "/instagram-ui/static/js/main.276bfb43.chunk.js.map",
     "runtime-main.js": "/instagram-ui/static/js/runtime-main.9b17314b.js",
     "runtime-main.js.map": "/instagram-ui/static/js/runtime-main.9b17314b.js.map",
     "static/js/2.2e98e4d3.chunk.js": "/instagram-ui/static/js/2.2e98e4d3.chunk.js",
     "static/js/2.2e98e4d3.chunk.js.map": "/instagram-ui/static/js/2.2e98e4d3.chunk.js.map",
     "index.html": "/instagram-ui/index.html",
-    "precache-manifest.e1464f3711e91deddb5adf90d1152c8c.js": "/instagram-ui/precache-manifest.e1464f3711e91deddb5adf90d1152c8c.js",
+    "precache-manifest.31ad785f672f8927d54617aaf9437b3f.js": "/instagram-ui/precache-manifest.31ad785f672f8927d54617aaf9437b3f.js",
     "service-worker.js": "/instagram-ui/service-worker.js",
     "static/css/main.c6c350e1.chunk.css.map": "/instagram-ui/static/css/main.c6c350e1.chunk.css.map",
     "static/media/instagramLogo.png": "/instagram-ui/static/media/instagramLogo.0a3a43fb.png"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9b17314b.js",
     "static/js/2.2e98e4d3.chunk.js",
     "static/css/main.c6c350e1.chunk.css",
-    "static/js/main.f76e8c4c.chunk.js"
+    "static/js/main.276bfb43.chunk.js"
   ]
 }
