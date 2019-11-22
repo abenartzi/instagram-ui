@@ -31,43 +31,34 @@ class Feed extends Component {
             border-color:#5798ff;
         `;
 
-        function timeConverter(UNIX_timestamp) {
-             let a = new Date(UNIX_timestamp * 1000);
-             let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-             let year = a.getFullYear();
-             let month = months[a.getMonth()];
-             let date = a.getDate();
-
-             let time = `${date} ${month} ${year}`;
-            return time;
-
-        }
 
         return (
             <div>
                 <div className="heightPlaceholder"></div>
                 <div className="loading">
-                {this.state.loading ?
-                    <div>
-                        <GridLoader
-                        css={override}
-                        sizeUnit={"px"}
-                        size={80}
-                        color={'#5798ff'}
-                        loading={this.state.loading}/>
-                    </div> : null
-                }
+                    {this.state.loading ?
+                        <div>
+                            <GridLoader
+                                css={override}
+                                sizeUnit={"px"}
+                                size={80}
+                                color={'#5798ff'}
+                                loading={this.state.loading}/>
+                        </div> : null
+                    }
                 </div>
                 <div className='container'>
                     {this.state.posts.map(post =>{
                         return <Post
+
                             key={post.id}
-                            created={timeConverter(post.created)}
+                            created={post.created}
                             image={post.image}
                             title={post.title}
                             likes={post.likes}
                             tags={post.tags}
                         />
+
                     })}
                 </div>
             </div>
