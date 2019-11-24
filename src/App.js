@@ -11,6 +11,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import CreatePost from "./CreatePost/CreatePost";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
                     </Route>
                     <Route path="/profile">
                         <Profile/>
+                    </Route>
+                    <Route path="/post/create">
+                        <CreatePost/>
                     </Route>
                     <Route path="/">
                         <Feed/>

@@ -5,6 +5,8 @@
   margin-top: 10px;
   overflow: hidden;
 }
+.card{
+}
 
 .card-text {
   font-family: OpenSans;
@@ -15,6 +17,8 @@
   justify-content: space-between;
 }
 .card img {
+  object-fit: cover;
+  height: -webkit-fill-available;
   width: 100%;
 }
 .card-body {
