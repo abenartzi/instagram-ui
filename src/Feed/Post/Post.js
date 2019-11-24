@@ -10,20 +10,15 @@ class Post extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            color : 'black',
-            like: true
+            liked: false
         }
     }
+    doLike = () => {
+      console.log('clicked');
+        this.setState({liked:!this.state.liked})
+    };
 
-    heartSetColor = (e) => {
-        if(this.state.like){
-            return this.setState({color:'red',like:false})
-        }else{
-            return this.setState({color:'black',like:true})
-        }
-    }
 
-    ;
 
     render() {
         function timeConverter(UNIX_timestamp) {
@@ -48,7 +43,6 @@ class Post extends Component {
                             <span className="card-text">{timeConverter(this.props.created)}</span>
                             </span>
 
-
                         <Link to={"/profile"} href={"#"} className="card-title"><FontAwesomeIcon className="userCircleIcon" icon={faUserCircle} size="2x"/></Link>
                     </div>
 
@@ -62,7 +56,8 @@ class Post extends Component {
 
                         <footer className={'cardFooter'}>
                             <TagList tags={this.props.tags}/>
-                            <div className="card-text" onMouseDown={this.heartSetColor}><FontAwesomeIcon className="heartIcon" icon={faHeart} style={{color:this.state.color}}/>{this.props.likes}</div>
+                            <div className="card-text">
+                                <FontAwesomeIcon className="heartIcon" icon={faHeart} style={{color:this.state.liked ? "red" : "black"}} onClick={this.doLike.bind(this)}/>{this.props.likes}</div>
                         </footer>
 
                     </div>
