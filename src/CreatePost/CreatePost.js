@@ -3,7 +3,8 @@ import { Button } from "react-bootstrap";
 import { Formik, Field, Form ,ErrorMessage} from 'formik';
 import './CreatePost.scss'
 import postModel from '../models/post.model'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCloudUploadAlt} from '@fortawesome/free-solid-svg-icons'
 class CreatePost extends Component {
 
     submit(values) {
@@ -12,19 +13,27 @@ class CreatePost extends Component {
 
     render() {
         return (
-            <div className="CreatePost">
+            <div className="container main">
+                <div className="CreatePost">
                 <h2>Create Post</h2>
                 <Formik initialValues={{image:'', title:'',tags:''}}
                     validationSchema={postModel} onSubmit={this.submit.bind(this)}>
                 <Form className="col-xs-12 col-sm-6">
                     <div className="form-group">
-                        <label>Image:</label>
-                        <Field type="file" name="image"/>
+
+                        <Field className="inputfile" id="file" type="file" name="image"/>
+                        <label htmlFor="file"> <FontAwesomeIcon icon={faCloudUploadAlt}/> <strong>Choose a file...</strong></label>
+
+                        <div className="container-fluid row">
+                        <ErrorMessage className="alert alert-danger mt-2" name="image" component="div" />
+                        </div>
                     </div>
                     <div className="form-group">
                         <label>Title:</label>
-                        <Field name="title" className="form-control" placeholder="Enter Title..."/>
-                        <ErrorMessage className="alert alert-danger" name="title" component="div" />
+                        <Field name="title" className="form-control" placeholder="Enter Title..." spellCheck="false"/>
+                        <div className="container-fluid row">
+                        <ErrorMessage className="alert alert-danger mt-2" name="title" component="div" />
+                        </div>
                     </div>
                     <div className="form-group">
                         <label>Tags:</label>
@@ -32,9 +41,11 @@ class CreatePost extends Component {
                     </div>
                     <div className="form-group">
                         <Button type="submit">Share</Button> {/*Button from react bootstrap*/}
+
                     </div>
                 </Form>
                 </Formik>
+                </div>
             </div>
         );
     }

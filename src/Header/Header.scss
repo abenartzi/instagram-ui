@@ -1,7 +1,9 @@
 .vl {
   border-left: 2px solid black;
   height: 40px;
+  display: inline-block;
   position: relative;
+  vertical-align: middle;
 }
 .instaLogo {
   width: 150px;

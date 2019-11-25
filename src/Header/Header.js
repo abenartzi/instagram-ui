@@ -8,9 +8,12 @@ class Header extends Component {
 
     render() {
         return (
-            <Navbar bg="light" expand="lg">
-
-                <Link className="nav-link" to="/"><img className="instaLogo" src={logo} alt="instagramLogo"/></Link>
+            <Navbar className="fixedNav" bg="light" expand="lg">
+                <Link className="nav-link" to="/">
+                    <img  src="https://img.icons8.com/nolan/64/000000/instagram-new.png" alt="#"/>
+                    <div className="vl"></div>
+                    <img className="instaLogo" src={logo} alt="instagramLogo"/>
+                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

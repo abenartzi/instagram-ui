@@ -5,8 +5,10 @@ class Profile extends Component {
     render() {
 
         return (
-            <div className="heightPlaceholder">
+            <div className="container ">
+            <div>
                 Profile
+            </div>
             </div>
         );
     }
