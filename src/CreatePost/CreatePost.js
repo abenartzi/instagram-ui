@@ -25,14 +25,14 @@ class CreatePost extends Component {
                         <label htmlFor="file"> <FontAwesomeIcon icon={faCloudUploadAlt}/> <strong>Choose a file...</strong></label>
 
                         <div className="container-fluid row">
-                        <ErrorMessage className="alert alert-danger mt-2" name="image" component="div" />
+                        <ErrorMessage className="alert alert-danger" name="image" component="div" />
                         </div>
                     </div>
                     <div className="form-group">
                         <label>Title:</label>
-                        <Field name="title" className="form-control" placeholder="Enter Title..." spellCheck="false"/>
+                        <Field as={"textarea"} name="title" className="form-control" placeholder="Enter Title..." spellCheck="false" maxLength={256}/>
                         <div className="container-fluid row">
-                        <ErrorMessage className="alert alert-danger mt-2" name="title" component="div" />
+                        <ErrorMessage className="alert alert-danger mt-2 my-2" name="title" component="div" />
                         </div>
                     </div>
                     <div className="form-group">
