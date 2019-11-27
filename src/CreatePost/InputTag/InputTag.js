@@ -1,5 +1,7 @@
 // https://medium.com/@jerrylowm/build-a-tags-input-react-component-from-scratch-1524f02acb9a
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTimesCircle} from '@fortawesome/free-solid-svg-icons'
 import React, {Component} from 'react';
 import './InputTag.scss'
 class InputTag extends Component {
@@ -38,7 +40,7 @@ class InputTag extends Component {
                     {this.state.tags.map((tag,i) => (
                         <li key={tag}>
                             {tag}
-                            <button type="button" onClick={() => { this.removeTag(i); }}>+</button>
+                            <button type="button" onClick={() => { this.removeTag(i); }}> <FontAwesomeIcon icon={faTimesCircle}/> </button>
                         </li>
                     ))}
                     <li className="input-tag_tags_input">

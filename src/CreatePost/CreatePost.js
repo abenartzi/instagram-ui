@@ -4,7 +4,7 @@ import { Formik, Field, Form ,ErrorMessage} from 'formik';
 import './CreatePost.scss'
 import postModel from '../models/post.model'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCloudUploadAlt, faShare, faShareAlt, faShareSquare} from '@fortawesome/free-solid-svg-icons'
+import {faCloudUploadAlt, faShare} from '@fortawesome/free-solid-svg-icons'
 import InputTag from "./InputTag/InputTag";
 class CreatePost extends Component {
 
