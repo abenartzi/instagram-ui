@@ -8,7 +8,7 @@ class InputTag extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tags:[ ]
+            tags:[]
         }
     }
     inputKeyDown = (e) => {

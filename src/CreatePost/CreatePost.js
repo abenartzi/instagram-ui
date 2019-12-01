@@ -4,8 +4,9 @@ import { Formik, Field, Form ,ErrorMessage} from 'formik';
 import './CreatePost.scss'
 import postModel from '../models/post.model'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCloudUploadAlt, faShare} from '@fortawesome/free-solid-svg-icons'
+import {faShare} from '@fortawesome/free-solid-svg-icons'
 import InputTag from "./InputTag/InputTag";
+import UploadBtn from "./UploadBtn/UploadBtn";
 class CreatePost extends Component {
 
     submit(values) {
@@ -21,10 +22,7 @@ class CreatePost extends Component {
                     validationSchema={postModel} onSubmit={this.submit.bind(this)}>
                 <Form className="col-xs-12 col-sm-6">
                     <div className="form-group">
-                        {/*https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/*/}
-                        <Field className="inputfile" id="file" type="file" name="image"/>
-                        <label htmlFor="file"> <FontAwesomeIcon icon={faCloudUploadAlt}/> <strong>Choose a file...</strong></label>
-
+                        <UploadBtn/>
                         <div className="container-fluid row">
                         <ErrorMessage className="alert alert-danger" name="image" component="div" />
                         </div>
