@@ -8,33 +8,33 @@ class Registration extends Component {
                 <div className="heightPlaceholder"></div>
                     <h2>Registration</h2>
                     <hr/>
-                <form action="#" className="col-xs-12 col-md-6">
-                    <div className="row form-group">
-                        <label htmlFor="" >Name:</label>
-                        <input type="text" className="form-control"/>
+                <form>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Name:</label>
+                        <input type="email" className="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp"/>
+                            <small id="emailHelp" className="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
                     </div>
-                    <div className="row form-group">
-                        <label htmlFor="" >Username:</label>
-                        <input type="text" className="form-control"/>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputPassword1">Username:</label>
+                        <input type="text" className="form-control" id="exampleInputPassword1"/>
                     </div>
-                    <div className="row form-group">
-                        <label htmlFor="" >Password:</label>
-                        <input type="password" className="form-control"/>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Password:</label>
+                        <input type="password" className="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp"/>
                     </div>
-                    <div className="row form-group">
-                        <label htmlFor="" >Birth Date:</label>
-                        <input type="date" className="form-control"/>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputPassword1">Birth Date:</label>
+                        <input type="date" className="form-control" id="exampleInputPassword1"/>
                     </div>
-                    <div className="row form-group ">
-                        <label htmlFor="" >Gender:</label>
-                        <input type="radio" name="gender"/>Male
-                        <input type="radio" name="gender"/>Female
+                    <div>
+                        <label htmlFor="exampleCheck1">Gender: </label>
+                        <input className="gender" name="gender" type="radio"  id="exampleCheck1"/>Male
+                        <input className="gender" name="gender" type="radio"  id="exampleCheck1"/>Female
                     </div>
-
-
-
-
-
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
 
 
