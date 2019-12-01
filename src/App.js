@@ -12,6 +12,8 @@ import {
     Link
 } from "react-router-dom";
 import CreatePost from "./CreatePost/CreatePost";
+import Registration from "./Registration/Registration";
+import Login from "./Login/Login";
 
 function App() {
   return (
@@ -20,6 +22,12 @@ function App() {
           <Header />
             <main>
                 <Switch>
+                    <Route path="/login">
+                        <Login/>
+                    </Route>
+                    <Route path="/register">
+                        <Registration/>
+                    </Route>
                     <Route path="/settings">
                         <Settings/>
                     </Route>
