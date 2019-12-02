@@ -19,7 +19,7 @@ class InputTag extends Component {
                 return;
             }
             e.preventDefault();
-            this.setState({tags:[...this.state.tags, "#" + val]});
+            this.setState({tags:[...this.state.tags,val]});
             this.tagInput.value = null;
         }else if(e.key === 'Backspace' && !val) {
             this.removeTag(this.state.tags.length -1);

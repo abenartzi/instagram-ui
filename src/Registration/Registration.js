@@ -11,7 +11,7 @@ class Registration extends Component {
                 <form>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Name:</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1"
+                        <input type="text" className="form-control" id="exampleInputEmail1"
                                aria-describedby="emailHelp"/>
                             <small id="emailHelp" className="form-text text-muted">We'll never share your email with
                                 anyone else.</small>
