@@ -12,7 +12,8 @@ class CreatePost extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tags:[]
+            tags:[],
+            tag: ''
         }
     }
 
@@ -23,6 +24,9 @@ class CreatePost extends Component {
         this.setState({
             tags: tags
         });
+    }
+    handleChangeInput(tag) {
+        this.setState({tag})
     }
 
     convertToFormData(values) {
@@ -52,50 +56,49 @@ class CreatePost extends Component {
                 <Formik initialValues={{image:'', title:'',tags:[]}}
                     validationSchema={postModel}
                         onSubmit={this.submit.bind(this)}
-                    render={({setFieldValue}) =>{
-                        return <Form className="col-xs-12 col-sm-6">
-                            <div className="row form-group">
-                                <input type="file" name="image" id="image" onChange={(event) => {
-                                    setFieldValue('image',event.currentTarget.files[0]);
-                                }}/>
-                                <label htmlFor="image" className="upload-button">
-                                    <span>
+                        render={({setFieldValue}) =>{
+                            return <Form className="col-xs-12 col-md-6">
+                                <div className="row form-group">
+                                    <input type="file" name="image" id="image" onChange={(event) => {
+                                        setFieldValue('image',event.currentTarget.files[0]);
+                                    }}/>
+                                    <label htmlFor="image" className="upload-button">
+                                        <span>
                                             <FontAwesomeIcon icon={faCloudUploadAlt}/>
                                             Select an image
-                                    </span>
-                                </label>
-                                <div className="container-fluid row">
-                                    <ErrorMessage className="alert alert-danger mt-2" name="image" component="div" />
+                                        </span>
+                                    </label>
+                                    <div className="container-fluid row">
+                                        <ErrorMessage className="alert alert-danger mt-2" name="image" component="div" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="row form-group">
-                                <label>Title:</label>
-                                <Field as={"textarea"} name="title" className="form-control" placeholder="Enter Title..." spellCheck="false" maxLength={256}/>
-                                <div className="container-fluid row">
+                                <div className="row form-group">
+                                    <label>Title:</label>
+                                    <Field as={"textarea"} name="title" className="form-control" placeholder="Enter Title..." spellCheck="false" maxLength={256}/>
                                     <ErrorMessage className="alert alert-danger mt-2 my-2" name="title" component="div" />
                                 </div>
-                            </div>
-                            <div className="row form-group">
-                                <label>Tags:</label>
+                                <div className="row form-group">
+                                    <label>Tags:</label>
                                     <TagsInput value={this.state.tags}
+                                               inputValue={this.state.tag}
                                                onChange={(tags) => {
-                                                   this.handleTagsChange(tags);
-                                                   setFieldValue('tags', tags);
-                                               }}
-                                               className="tags-wrapper"/>
-                                <ErrorMessage className="alert alert-danger mt-2" name="tags" component="div" />
-                                <div><sub>Press Enter after inserting a tag</sub></div>
-                                {/*<Field name="tags" className="form-control" placeholder="Enter Tags..."/>*/}
-                                {/*<InputTag/>*/}
+                                                     this.handleTagsChange(tags);
+                                                     setFieldValue( 'tags', tags);
+                                                }}
+                                                   className="tags-wrapper "/>
+                                    <ErrorMessage className="alert alert-danger mt-2" name="tags" component="div" />
+                                    <div><sub>Press Enter after inserting a tag</sub></div>
+                                    {/*<Field name="tags" className="form-control" placeholder="Enter Tags..."/>*/}
+                                    {/*<InputTag/>*/}
 
-                            </div>
-                            <div className="row form-group d-flex justify-content-end">
-                                <Button type="submit">
-                                    <FontAwesomeIcon icon={faShare}/>&nbsp;
-                                    Share
-                                </Button> {/*Button from react bootstrap*/}
+                                </div>
+                                <div className="row form-group d-flex justify-content-end">
+                                    <Button type="submit">
+                                        <FontAwesomeIcon icon={faShare}/>&nbsp;
+                                        Share
+                                    </Button> {/*Button from react bootstrap*/}
 
-                            </div>
+                                </div>
                         </Form>;
 
                     }}>

@@ -9,7 +9,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    // Link
 } from "react-router-dom";
 import CreatePost from "./CreatePost/CreatePost";
 import Registration from "./Registration/Registration";
@@ -20,7 +20,7 @@ function App() {
     <Router>
         <div className="App">
           <Header />
-            <main>
+            <main className="container main">
                 <Switch>
                     <Route path="/login">
                         <Login/>

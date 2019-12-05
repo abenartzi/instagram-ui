@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import { css } from '@emotion/core';
-import { GridLoader } from 'react-spinners';
-
 import './Feed.scss';
 import Post from "./Post/Post";
+import { css } from '@emotion/core';
+import { GridLoader } from 'react-spinners';
 
 class Feed extends Component {
     constructor(props) {
@@ -33,33 +32,26 @@ class Feed extends Component {
 
 
         return (
-            <div>
-                <div className="loading">
+            <div className="Feed d-flex flex-wrap">
                     {this.state.loading ?
-                        <div>
+                        <div className="loader">
                             <GridLoader
                                 css={override}
                                 sizeUnit={"px"}
                                 size={80}
                                 color={'#5798ff'}
                                 loading={this.state.loading}/>
-                        </div> : null
+                        </div> :
+                        null
                     }
-                </div>
-                <div className='container'>
                     {this.state.posts.map(post =>{
-                        return <Post
-
-                            key={post.id}
-                            created={post.created}
-                            image={post.image}
-                            title={post.title}
-                            likes={post.likes}
-                            tags={post.tags}
-                        />
-
+                        return <Post key={post.id}
+                                created={post.created}
+                                image={post.image}
+                                title={post.title}
+                                likes={post.likes}
+                                tags={post.tags}/>
                     })}
-                </div>
             </div>
         );
     }

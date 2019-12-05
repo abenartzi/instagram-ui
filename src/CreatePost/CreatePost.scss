@@ -57,8 +57,6 @@
     border-radius: 0.25rem;
 
     .react-tagsinput-input {
-      background: slategrey;
-      color: white;
       box-shadow: none;
       border: 0;
       padding: 0;
@@ -76,13 +74,7 @@
       padding: 2px 4px;
       border-radius: 3px;
     }
-    .react-tagsinput-input::placeholder {
-      color: white;
-    }
+
   }
 }
 
-.col-xs-12 {
-  top: 3em;
-  left: 17em;
-}

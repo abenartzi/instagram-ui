@@ -1,3 +1,49 @@
+.Header.navbar-light {
+  background-color: #7c99b9;
+
+  .navbar-brand {
+    color: #f54555;
+  }
+
+  .navbar-nav .nav-link,
+  .user-text a {
+    color: black;
+    transition: color 200ms;
+    &:hover {
+      color: #f54555;
+      text-decoration: none;
+    }
+  }
+
+  .user {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .user-avatar {
+      width: 30px;
+      height: 30px;
+      line-height: 26px;
+      text-align: center;
+      color: #007bff;
+      font-weight: bold;
+      font-size: 35px;
+      //background-color: #007bff;
+      //border: 2px solid #ffffff;
+      //border-radius: 3px;
+      //box-shadow: 0 0 0 2px #dd4555;
+    }
+
+    .user-text {
+      display: flex;
+      a {
+        margin: 0 5px;
+      }
+      margin: 3px 10px;
+    }
+  }
+}
+
+
 .vl {
   border-left: 2px solid black;
   height: 40px;
@@ -8,11 +54,7 @@
 .instaLogo {
   width: 150px;
 }
-.fixedNav {
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-}
-.nav-link {
-  font-family: OpenSans;
-}
+//
+//.nav-link {
+//  font-family: OpenSans;
+//}

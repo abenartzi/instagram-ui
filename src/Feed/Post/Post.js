@@ -34,35 +34,31 @@ class Post extends Component {
         }
 
         return (
-            <div className="d-flex">
-                <div className="card">
+            <div className="col-sm-12 col-md-4">
+                    <article className="Post">
+                        <header>
+                            <div className="Post-date">
+                                <FontAwesomeIcon className={"calIcon"} icon={faCalendarAlt}/>
+                                {timeConverter(this.props.created)}
+                            </div>
+                            <Link to={"/profile"} href={"#"}><FontAwesomeIcon icon={faUserCircle} size="2x"/></Link>
 
-                    <div className="card-header">
-                            <span className="cardDate">
-                            <FontAwesomeIcon className={"calIcon"} icon={faCalendarAlt}/>
-                            <span className="card-text">{timeConverter(this.props.created)}</span>
-                            </span>
-
-                        <Link to={"/profile"} href={"#"} className="card-title"><FontAwesomeIcon className="userCircleIcon" icon={faUserCircle} size="2x"/></Link>
-                    </div>
-
-                    <div className="userImage">
-                        <img src={this.props.image} alt={this.props.imageId}/>
-                    </div>
-
-                    <div className="card-body">
-
-                        <div><h5 className="card-title">{this.props.title}</h5></div>
-
-                        <footer className={'cardFooter'}>
+                        </header>
+                        <div className="Post-image">
+                            <img src={this.props.image} alt={this.props.imageId}/>
+                        </div>
+                        <div className="Post-content" >
+                            <h1 className="Post-title">{this.props.title}</h1>
                             <TagList tags={this.props.tags}/>
-                            <div className="card-text">
-                                <FontAwesomeIcon className="heartIcon" icon={faHeart} style={{color:this.state.liked ? "red" : "black"}} onClick={this.doLike.bind(this)}/>{this.props.likes}</div>
-                        </footer>
+                        </div>
+                        <div className="Post-actions">
+                            <FontAwesomeIcon className="heartIcon" icon={faHeart} style={{color:this.state.liked ? "red" : "black"}} onClick={this.doLike.bind(this)}/>{this.props.likes}
+                        </div>
+                    </article>
 
-                    </div>
-                </div>
             </div>
+
+
         );
     }
 }
