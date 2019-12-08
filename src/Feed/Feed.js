@@ -3,6 +3,7 @@ import './Feed.scss';
 import Post from "./Post/Post";
 import { css } from '@emotion/core';
 import { GridLoader } from 'react-spinners';
+import config from "../config"
 
 class Feed extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class Feed extends Component {
 
     componentDidMount() {
         this.setState({loading: true});
-        fetch('https://my-json-server.typicode.com/evyros/fake-api/posts')
+        fetch(config.apiURL + '/api/posts')
             .then(res => res.json())
             .then(posts => {
                 this.setState({posts,loading:false})
@@ -45,7 +46,7 @@ class Feed extends Component {
                         null
                     }
                     {this.state.posts.map(post =>{
-                        return <Post key={post.id}
+                        return <Post key={post._id}
                                 created={post.created}
                                 image={post.image}
                                 title={post.title}

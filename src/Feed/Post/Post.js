@@ -4,7 +4,7 @@ import TagList from "./TagList/TagList";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCalendarAlt, faHeart, faUserCircle} from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom";
-
+import config from '../../config/'
 
 class Post extends Component {
     constructor(props) {
@@ -17,35 +17,38 @@ class Post extends Component {
       console.log('clicked');
         this.setState({liked:!this.state.liked})
     };
-
+    formatDate(dateStr) {
+        const date = new Date(dateStr);
+        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return months[date.getMonth()] + ' ' + date.getDate() + ' ' + date.getFullYear();
+    }
 
 
     render() {
-        function timeConverter(UNIX_timestamp) {
-            let a = new Date(UNIX_timestamp * 1000);
-            let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-            let year = a.getFullYear();
-            let month = months[a.getMonth()];
-            let date = a.getDate();
-
-            let time = `${date} ${month} ${year}`;
-            return time;
-
-        }
-
+        // function timeConverter(UNIX_timestamp) {
+        //     let a = new Date(UNIX_timestamp * 1000);
+        //     let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        //     let year = a.getFullYear();
+        //     let month = months[a.getMonth()];
+        //     let date = a.getDate();
+        //
+        //     let time = `${date} ${month} ${year}`;
+        //     return time;
+        //
+        // }
         return (
             <div className="col-sm-12 col-md-4">
                     <article className="Post">
                         <header>
                             <div className="Post-date">
                                 <FontAwesomeIcon className={"calIcon"} icon={faCalendarAlt}/>
-                                {timeConverter(this.props.created)}
+                                {this.formatDate(this.props.created)}
                             </div>
                             <Link to={"/profile"} href={"#"}><FontAwesomeIcon icon={faUserCircle} size="2x"/></Link>
 
                         </header>
                         <div className="Post-image">
-                            <img src={this.props.image} alt={this.props.imageId}/>
+                            <img src={config.apiURL + '/' + this.props.image} alt={this.props.imageId}/>
                         </div>
                         <div className="Post-content" >
                             <h1 className="Post-title">{this.props.title}</h1>

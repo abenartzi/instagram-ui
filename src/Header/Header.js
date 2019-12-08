@@ -5,6 +5,8 @@ import logo from "../Images/headerImage/instagramLogo.png"
 import { Navbar, Nav} from 'react-bootstrap'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import config from "../config";
+import UserBox from "./UserBox/UserBox";
 
 class Header extends Component {
 
@@ -31,9 +33,9 @@ class Header extends Component {
                             <div className="user-avatar">
                                 <FontAwesomeIcon icon={faUserCircle} />
                             </div>
+
                             <div className="user-text">
-                                <Link className="nav-link" to="/register">Register</Link>
-                                <Link className="nav-link" to="/login">Login</Link>
+                                <UserBox/>
                             </div>
                         </div>
                     </div>

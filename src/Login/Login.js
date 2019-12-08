@@ -18,6 +18,7 @@ class Login extends Component {
         fetch('http://localhost:4000/api/users/login', {
             method: 'POST',
             body: JSON.stringify(values),
+            credentials: "include",
             headers: {
                 'Content-Type': 'application/json'
             }
