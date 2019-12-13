@@ -1,4 +1,4 @@
 export default {
-    apiURL:'http://localhost:4000'
+    apiURL:'https://instagram-api-abenartzi.herokuapp.com'
 };
 
