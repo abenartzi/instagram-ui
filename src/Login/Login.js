@@ -3,6 +3,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import loginModel from '../models/login.model';
 import { Button } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
+import config from '../config'
 
 class Login extends Component {
 
@@ -15,7 +16,7 @@ class Login extends Component {
 
     submit(values) {
         this.setState({incorrectLoginMessage: false});
-        fetch('http://localhost:4000/api/users/login', {
+        fetch(config.apiURL + '/api/users/login', {
             method: 'POST',
             body: JSON.stringify(values),
             credentials: "include",
