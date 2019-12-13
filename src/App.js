@@ -31,7 +31,7 @@ function App() {
                     <Route path="/settings">
                         <Settings/>
                     </Route>
-                    <Route path="/profile">
+                    <Route path="/instagram-ui/profile">
                         <Profile/>
                     </Route>
                     <Route path="/post/create">
